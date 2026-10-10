@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="cs" data-lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taya: Učení hrou pro děti</title>
+<meta name="description" content="Taya je vzdělávací aplikace pro děti od 5 do 10 let. Matematika a čtení na ostrovech plných her, bez reklam a bez sledování.">
+<meta name="theme-color" content="#6B4EFF">
+<meta property="og:title" content="Taya: Učení hrou pro děti">
+<meta property="og:description" content="Matematika a čtení pro děti 5–10 let na ostrovech plných her.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/app-icon.svg">
+<link rel="apple-touch-icon" href="assets/app-icon.svg">
+<link rel="preload" href="assets/fonts/Fredoka-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Nunito-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script>
+  // Store links: paste the App Store / Google Play URLs here. Empty = the button shows "Coming soon".
+  window.TAYA_STORES = { ios: "", android: "" };
+  document.documentElement.classList.add("js");
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span lang="cs">Přeskočit na obsah</span><span lang="en">Skip to content</span></a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sp" viewBox="0 0 24 24"><path d="M12 1.5C12.6 7.4 16.6 11.4 22.5 12C16.6 12.6 12.6 16.6 12 22.5C11.4 16.6 7.4 12.6 1.5 12C7.4 11.4 11.4 7.4 12 1.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.6-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="topbar" id="top">
+  <div class="wrap">
+    <a class="wordmark" href="#top" aria-label="Taya">
+      <span class="l"><span>t</span></span><span class="l"><span>a</span></span><span class="l"><span>y</span></span><span class="l"><span>a</span></span>
+      <svg class="spark" fill="#FFC61A" aria-hidden="true"><use href="#sp"/></svg>
+    </a>
+    <nav class="topnav" aria-label="Menu">
+      <a href="#taya"><span lang="cs">Taya</span><span lang="en">Meet Taya</span></a>
+      <a href="#ostrovy"><span lang="cs">Ostrovy</span><span lang="en">Islands</span></a>
+      <a href="#rodice"><span lang="cs">Pro rodiče</span><span lang="en">For parents</span></a>
+      <a href="#projekt"><span lang="cs">O projektu</span><span lang="en">About</span></a>
+    </nav>
+    <div class="langs" role="group" aria-label="Jazyk / Language">
+      <button type="button" data-set-lang="cs" aria-pressed="true">CZ</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ Hero: the splash, grown up ============ -->
+<section class="hero">
+  <svg class="floaty" style="left:6%;top:12%;width:30px;height:30px;animation:drift 3.4s ease-in-out infinite" fill="#FFC61A" aria-hidden="true"><use href="#sp"/></svg>
+  <svg class="floaty" style="left:44%;top:9%;width:18px;height:18px;animation:drift 2.8s ease-in-out .6s infinite;opacity:.75" fill="#FFFFFF" aria-hidden="true"><use href="#sp"/></svg>
+  <svg class="floaty" style="right:5%;top:58%;width:22px;height:22px;animation:drift 3.1s ease-in-out 1.1s infinite" fill="#B8A8FF" aria-hidden="true"><use href="#sp"/></svg>
+  <svg class="floaty" style="left:3%;top:72%;width:16px;height:16px;animation:drift 2.6s ease-in-out .3s infinite;opacity:.6" fill="#FFFFFF" aria-hidden="true"><use href="#sp"/></svg>
+  <svg class="floaty" style="right:12%;top:8%;width:24px;height:24px;animation:drift 3.6s ease-in-out .9s infinite;opacity:.8" fill="#FFC61A" aria-hidden="true"><use href="#sp"/></svg>
+
+  <div class="wrap">
+    <div class="copy">
+      <div class="wordmark" aria-hidden="true">
+        <span class="l"><span>t</span></span><span class="l"><span>a</span></span><span class="l"><span>y</span></span><span class="l"><span>a</span></span>
+        <svg class="spark" fill="#FFC61A"><use href="#sp"/></svg>
+      </div>
+      <h1><span lang="cs">Učení, které baví jako hra.</span><span lang="en">Learning that feels like play.</span></h1>
+      <p class="lead">
+        <span lang="cs">Matematika a čtení pro děti od 5 do 10 let. Na ostrovech plných her, s kamarádkou, která je vždycky na jejich straně.</span>
+        <span lang="en">Math and reading for kids aged 5 to 10. On islands full of games, with a friend who is always on their side.</span>
+      </p>
+      <div class="stores">
+        <a class="store" data-store="ios" href="#stahnout">
+          <svg aria-hidden="true"><use href="#i-phone"/></svg>
+          <span class="t"><small><span lang="cs">Stáhnout v</span><span lang="en">Download on the</span></small><strong>App Store</strong></span>
+        </a>
+        <a class="store" data-store="android" href="#stahnout">
+          <svg aria-hidden="true"><use href="#i-play"/></svg>
+          <span class="t"><small><span lang="cs">Stáhnout na</span><span lang="en">Get it on</span></small><strong>Google Play</strong></span>
+        </a>
+      </div>
+      <p class="note"><span lang="cs">Bez reklam. Bez účtu. Funguje i bez internetu.</span><span lang="en">No ads. No account. Works offline.</span></p>
+    </div>
+
+    <button type="button" class="stage">
+      <span class="sr"><span lang="cs">Taya. Ťukni na ni a zaskáče radostí.</span><span lang="en">Taya. Tap her and she jumps for joy.</span></span>
+      <span class="ring" aria-hidden="true"></span>
+      <span class="sun" aria-hidden="true"></span>
+      <svg class="taya" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><clipPath id="eyeClip"><ellipse cx="79" cy="110" rx="15" ry="18"/><ellipse cx="121" cy="110" rx="15" ry="18"/></clipPath></defs>
+        <g style="animation: bob 2.8s ease-in-out 1.2s infinite">
+        <g class="hop">
+        <g class="lean">
+          <path d="M100 6 C101 16 107 22 117 23 C107 24 101 30 100 40 C99 30 93 24 83 23 C93 22 99 16 100 6 Z" fill="#FFFFFF" style="transform-box: fill-box; transform-origin: center; animation: twinkle 2.2s ease-in-out 1.2s infinite"/>
+          <path d="M50 96 C38 66 42 38 58 28 C73 34 86 54 91 70 Z" fill="#7A5FFF"/>
+          <path d="M150 96 C162 66 158 38 142 28 C127 34 114 54 109 70 Z" fill="#7A5FFF"/>
+          <path d="M57 82 C51 64 53 49 61 42 C70 48 78 60 81 70 Z" fill="#FFACCE"/>
+          <path d="M143 82 C149 64 147 49 139 42 C130 48 122 60 119 70 Z" fill="#FFACCE"/>
+          <ellipse cx="76" cy="180" rx="19" ry="10" fill="#2B1F7A"/>
+          <ellipse cx="124" cy="180" rx="19" ry="10" fill="#2B1F7A"/>
+          <path d="M100 54 C150 54 172 92 172 128 C172 164 140 184 100 184 C60 184 28 164 28 128 C28 92 50 54 100 54 Z" fill="#7A5FFF"/>
+          <ellipse cx="100" cy="151" rx="44" ry="30" fill="#EEEAFF"/>
+          <ellipse cx="66" cy="80" rx="16" ry="8" fill="#FFFFFF" opacity="0.25" transform="rotate(-32 66 80)"/>
+          <g class="idle-only">
+            <ellipse cx="33" cy="140" rx="11" ry="17" fill="#4B2FD6" transform="rotate(18 33 140)"/>
+            <g style="transform-origin: 160px 118px; animation: wave 0.9s ease-in-out 1.1s 3">
+              <ellipse cx="170" cy="100" rx="11" ry="19" fill="#4B2FD6" transform="rotate(28 170 100)"/>
+            </g>
+          </g>
+          <g class="cheer-only">
+            <ellipse cx="28" cy="98" rx="11" ry="20" fill="#4B2FD6" transform="rotate(-32 28 98)"/>
+            <ellipse cx="172" cy="98" rx="11" ry="20" fill="#4B2FD6" transform="rotate(32 172 98)"/>
+          </g>
+          <g class="face">
+          <g class="idle-only">
+          <g style="transform-box: fill-box; transform-origin: center; animation: blink 4.6s ease-in-out infinite">
+            <ellipse cx="79" cy="110" rx="15" ry="18" fill="#FFFFFF"/>
+            <ellipse cx="121" cy="110" rx="15" ry="18" fill="#FFFFFF"/>
+            <g clip-path="url(#eyeClip)">
+              <g class="pupils">
+                <ellipse cx="81" cy="113" rx="9" ry="11" fill="#231E3D"/>
+                <ellipse cx="119" cy="113" rx="9" ry="11" fill="#231E3D"/>
+                <circle cx="84.5" cy="108" r="3.4" fill="#FFFFFF"/>
+                <circle cx="122.5" cy="108" r="3.4" fill="#FFFFFF"/>
+              </g>
+            </g>
+          </g>
+          <ellipse cx="60" cy="133" rx="9" ry="5.5" fill="#FFACCE"/>
+          <ellipse cx="140" cy="133" rx="9" ry="5.5" fill="#FFACCE"/>
+          <path d="M88 130 Q100 146 112 130 Z" fill="#231E3D" stroke="#231E3D" stroke-width="3" stroke-linejoin="round"/>
+          </g>
+          <g class="cheer-only">
+            <path d="M66 113 Q79 99 92 113" fill="none" stroke="#231E3D" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M108 113 Q121 99 134 113" fill="none" stroke="#231E3D" stroke-width="5.5" stroke-linecap="round"/>
+            <ellipse cx="60" cy="130" rx="9" ry="5.5" fill="#FFACCE"/>
+            <ellipse cx="140" cy="130" rx="9" ry="5.5" fill="#FFACCE"/>
+            <path d="M86 127 Q100 151 114 127 Z" fill="#231E3D" stroke="#231E3D" stroke-width="3" stroke-linejoin="round"/>
+            <ellipse cx="100" cy="135" rx="6.5" ry="3.5" fill="#FF7DB3"/>
+          </g>
+          </g>
+        </g>
+        </g>
+        </g>
+      </svg>
+      <span class="burst" aria-hidden="true">
+        <i style="left:22%;top:26%;width:14px;height:14px;border-radius:3px;background:#FFC61A"></i>
+        <i style="left:36%;top:12%;width:12px;height:12px;border-radius:50%;background:#1FC48A;animation-delay:-.42s"></i>
+        <i style="right:26%;top:16%;width:14px;height:10px;border-radius:3px;background:#FF5FA2;animation-delay:-.46s"></i>
+        <i style="right:14%;top:34%;width:12px;height:12px;border-radius:50%;background:#22A6F2;animation-delay:-.38s"></i>
+        <i style="left:12%;top:44%;width:10px;height:14px;border-radius:3px;background:#FFFFFF;animation-delay:-.34s"></i>
+        <i style="right:40%;top:6%;width:11px;height:11px;border-radius:2px;background:#FF8A1F;animation-delay:-.4s"></i>
+        <svg viewBox="0 0 24 24" fill="#FFC61A" style="left:8%;top:18%;width:34px;height:34px"><use href="#sp"/></svg>
+        <svg viewBox="0 0 24 24" fill="#FFFFFF" style="right:6%;top:12%;width:26px;height:26px;animation-delay:-.6s"><use href="#sp"/></svg>
+        <svg viewBox="0 0 24 24" fill="#1FC48A" style="left:6%;top:62%;width:22px;height:22px;animation-delay:-.56s"><use href="#sp"/></svg>
+        <svg viewBox="0 0 24 24" fill="#FFC61A" style="right:4%;top:56%;width:30px;height:30px;animation-delay:-.58s"><use href="#sp"/></svg>
+      </span>
+    </button>
+  </div>
+
+  <svg class="shore" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 52 C160 18 320 18 480 44 C640 70 800 72 960 46 C1120 20 1280 20 1440 48 L1440 90 L0 90 Z" fill="#F7F5FD"/>
+  </svg>
+</section>
+
+<!-- ============ Meet Taya (for kids) ============ -->
+<section class="band meet" id="taya">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow"><span lang="cs">Pro děti</span><span lang="en">For kids</span></span>
+      <h2><span lang="cs">Ahoj, já jsem Taya!</span><span lang="en">Hi, I’m Taya!</span></h2>
+      <p>
+        <span lang="cs">Provedu tě ostrovy plnými čísel a písmen. Každá lekce je hra a každý pokus se počítá.</span>
+        <span lang="en">I’ll take you across islands full of numbers and letters. Every lesson is a game, and every try counts.</span>
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card reveal">
+        <div class="demo" style="background:#FFF4CF;align-items:flex-end;padding-bottom:14px">
+          <span aria-hidden="true" style="position:absolute;left:30%;top:40px;width:12px;height:12px;border-radius:3px;background:#FFC61A;animation:confetti 2.4s ease-out infinite"></span>
+          <span aria-hidden="true" style="position:absolute;left:38%;top:22px;width:10px;height:10px;border-radius:50%;background:#1FC48A;animation:confetti 2.4s ease-out .08s infinite"></span>
+          <span aria-hidden="true" style="position:absolute;right:32%;top:28px;width:12px;height:8px;border-radius:3px;background:#FF5FA2;animation:confetti 2.4s ease-out .04s infinite"></span>
+          <span aria-hidden="true" style="position:absolute;right:26%;top:58px;width:10px;height:10px;border-radius:50%;background:#22A6F2;animation:confetti 2.4s ease-out .12s infinite"></span>
+          <span aria-hidden="true" style="position:absolute;left:24%;top:84px;width:8px;height:12px;border-radius:3px;background:#6B4EFF;animation:confetti 2.4s ease-out .16s infinite"></span>
+          <span aria-hidden="true" style="position:absolute;right:40%;top:12px;width:9px;height:9px;border-radius:2px;background:#FF8A1F;animation:confetti 2.4s ease-out .1s infinite"></span>
+          <svg viewBox="0 0 200 200" width="180" height="180" role="img" aria-label="Taya cheering: jumping with arms up">
+            <ellipse cx="100" cy="191" rx="54" ry="7" fill="#231E3D" opacity="0.14" style="transform-box: fill-box; transform-origin: center; animation: jumpShadow 2.4s ease-in-out infinite"/>
+            <g style="transform-origin: 100px 190px; animation: jump 2.4s ease-in-out infinite">
+              <path d="M100 6 C101 16 107 22 117 23 C107 24 101 30 100 40 C99 30 93 24 83 23 C93 22 99 16 100 6 Z" fill="#FFC61A"/>
+              <path d="M50 96 C38 66 42 38 58 28 C73 34 86 54 91 70 Z" fill="#7A5FFF"/>
+              <path d="M150 96 C162 66 158 38 142 28 C127 34 114 54 109 70 Z" fill="#7A5FFF"/>
+              <path d="M57 82 C51 64 53 49 61 42 C70 48 78 60 81 70 Z" fill="#FFACCE"/>
+              <path d="M143 82 C149 64 147 49 139 42 C130 48 122 60 119 70 Z" fill="#FFACCE"/>
+              <ellipse cx="76" cy="180" rx="19" ry="10" fill="#2B1F7A"/>
+              <ellipse cx="124" cy="180" rx="19" ry="10" fill="#2B1F7A"/>
+              <path d="M100 54 C150 54 172 92 172 128 C172 164 140 184 100 184 C60 184 28 164 28 128 C28 92 50 54 100 54 Z" fill="#7A5FFF"/>
+              <ellipse cx="100" cy="151" rx="44" ry="30" fill="#EEEAFF"/>
+              <ellipse cx="66" cy="80" rx="16" ry="8" fill="#FFFFFF" opacity="0.25" transform="rotate(-32 66 80)"/>
+              <ellipse cx="28" cy="98" rx="11" ry="20" fill="#4B2FD6" transform="rotate(-32 28 98)"/>
+              <ellipse cx="172" cy="98" rx="11" ry="20" fill="#4B2FD6" transform="rotate(32 172 98)"/>
+              <path d="M66 113 Q79 99 92 113" fill="none" stroke="#231E3D" stroke-width="5.5" stroke-linecap="round"/>
+              <path d="M108 113 Q121 99 134 113" fill="none" stroke="#231E3D" stroke-width="5.5" stroke-linecap="round"/>
+              <ellipse cx="60" cy="130" rx="9" ry="5.5" fill="#FFACCE"/>
+              <ellipse cx="140" cy="130" rx="9" ry="5.5" fill="#FFACCE"/>
+              <path d="M86 127 Q100 151 114 127 Z" fill="#231E3D" stroke="#231E3D" stroke-width="3" stroke-linejoin="round"/>
+              <ellipse cx="100" cy="135" rx="6.5" ry="3.5" fill="#FF7DB3"/>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <h3><span lang="cs">Hurá, povedlo se!</span><span lang="en">Yay, you did it!</span></h3>
+          <p><span lang="cs">Když dokončíš lekci, skáču radostí. Tohle si šetřím na konec, aby to bylo pokaždé něco extra.</span><span lang="en">When you finish a lesson, I jump for joy. I save this one for the end, so it always feels special.</span></p>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="demo" style="background:#FFE6E1;align-items:flex-end;padding-bottom:6px">
+          <svg viewBox="0 0 200 200" width="180" height="180" role="img" aria-label="Taya says oops, has a think, shakes it off and cheers you on" style="overflow: visible">
+            <ellipse cx="100" cy="191" rx="54" ry="7" fill="#231E3D" opacity="0.14" style="transform-box: fill-box; transform-origin: center; animation: oopsShadow 2.4s ease-in-out infinite"/>
+            <g opacity="0" style="animation: oopsLines 2.4s ease-in-out infinite"><path d="M16 108 Q8 124 16 140" fill="none" stroke="#B8A8FF" stroke-width="5" stroke-linecap="round"/><path d="M5 114 Q0 124 5 134" fill="none" stroke="#B8A8FF" stroke-width="5" stroke-linecap="round"/><path d="M184 108 Q192 124 184 140" fill="none" stroke="#B8A8FF" stroke-width="5" stroke-linecap="round"/><path d="M195 114 Q200 124 195 134" fill="none" stroke="#B8A8FF" stroke-width="5" stroke-linecap="round"/></g>
+            <g style="transform-origin: 100px 190px; animation: oopsBody 2.4s ease-in-out infinite">
+              <path d="M100 6 C101 16 107 22 117 23 C107 24 101 30 100 40 C99 30 93 24 83 23 C93 22 99 16 100 6 Z" fill="#FFC61A" style="transform-box: fill-box; transform-origin: center; animation: oopsSpark 2.4s ease-in-out infinite"/>
+              <g style="transform-origin: 72px 80px; animation: oopsEarL 2.4s ease-in-out infinite"><path d="M50 96 C38 66 42 38 58 28 C73 34 86 54 91 70 Z" fill="#7A5FFF"/><path d="M57 82 C51 64 53 49 61 42 C70 48 78 60 81 70 Z" fill="#FFACCE"/></g>
+              <g style="transform-origin: 128px 80px; animation: oopsEarR 2.4s ease-in-out infinite"><path d="M150 96 C162 66 158 38 142 28 C127 34 114 54 109 70 Z" fill="#7A5FFF"/><path d="M143 82 C149 64 147 49 139 42 C130 48 122 60 119 70 Z" fill="#FFACCE"/></g>
+              <ellipse cx="76" cy="180" rx="19" ry="10" fill="#2B1F7A"/>
+              <ellipse cx="124" cy="180" rx="19" ry="10" fill="#2B1F7A"/>
+              <path d="M100 54 C150 54 172 92 172 128 C172 164 140 184 100 184 C60 184 28 164 28 128 C28 92 50 54 100 54 Z" fill="#7A5FFF"/>
+              <ellipse cx="100" cy="151" rx="44" ry="30" fill="#EEEAFF"/>
+              <ellipse cx="66" cy="80" rx="16" ry="8" fill="#FFFFFF" opacity="0.25" transform="rotate(-32 66 80)"/>
+              <ellipse cx="33" cy="140" rx="11" ry="17" fill="#4B2FD6" transform="rotate(18 33 140)"/>
+              <g style="animation: oopsArmDown 2.4s ease-in-out infinite"><ellipse cx="167" cy="140" rx="11" ry="17" fill="#4B2FD6" transform="rotate(-18 167 140)"/></g>
+              <g opacity="0" style="transform-origin: 156px 118px; animation: oopsArmUp 2.4s ease-in-out infinite"><ellipse cx="172" cy="98" rx="11" ry="20" fill="#4B2FD6" transform="rotate(32 172 98)"/></g>
+              <g style="animation: oopsEyesOpen 2.4s ease-in-out infinite"><ellipse cx="79" cy="110" rx="15" ry="18" fill="#FFFFFF"/><ellipse cx="121" cy="110" rx="15" ry="18" fill="#FFFFFF"/><g style="animation: oopsLook 2.4s ease-in-out infinite"><ellipse cx="76" cy="115" rx="9" ry="11" fill="#231E3D"/><ellipse cx="116" cy="115" rx="9" ry="11" fill="#231E3D"/><circle cx="79.5" cy="110" r="3.4" fill="#FFFFFF"/><circle cx="119.5" cy="110" r="3.4" fill="#FFFFFF"/></g></g>
+              <g opacity="0" style="animation: oopsEyesShut 2.4s ease-in-out infinite"><path d="M68 102 L86 111 L68 120" fill="none" stroke="#231E3D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M132 102 L114 111 L132 120" fill="none" stroke="#231E3D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+              <g opacity="0" style="animation: oopsEyesHappy 2.4s ease-in-out infinite"><path d="M66 113 Q79 99 92 113" fill="none" stroke="#231E3D" stroke-width="5.5" stroke-linecap="round"/><path d="M108 113 Q121 99 134 113" fill="none" stroke="#231E3D" stroke-width="5.5" stroke-linecap="round"/></g>
+              <ellipse cx="60" cy="133" rx="9" ry="5.5" fill="#FFACCE"/><ellipse cx="140" cy="133" rx="9" ry="5.5" fill="#FFACCE"/>
+              <path d="M91 133 Q100 142 109 133" fill="none" stroke="#231E3D" stroke-width="4.5" stroke-linecap="round" style="animation: oopsMouthBase 2.4s ease-in-out infinite"/>
+              <ellipse cx="100" cy="138" rx="6.5" ry="7.5" fill="#231E3D" opacity="0" style="animation: oopsMouthO 2.4s ease-in-out infinite"/>
+              <path d="M88 137 Q94 131 100 137 Q106 143 112 137" fill="none" stroke="#231E3D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0" style="animation: oopsMouthWave 2.4s ease-in-out infinite"/>
+              <g opacity="0" style="animation: oopsMouthGrin 2.4s ease-in-out infinite"><path d="M86 127 Q100 151 114 127 Z" fill="#231E3D" stroke="#231E3D" stroke-width="3" stroke-linejoin="round"/><ellipse cx="100" cy="135" rx="6.5" ry="3.5" fill="#FF7DB3"/></g>
+              <g opacity="0" style="transform-box: fill-box; transform-origin: center; animation: oopsSweat 2.4s ease-in-out infinite"><path d="M154 67 C159 75 162 80 162 84 C162 89 158 92 154 92 C150 92 146 89 146 84 C146 80 149 75 154 67 Z" fill="#97D6FF" stroke="#FFFFFF" stroke-width="2"/><ellipse cx="151" cy="85" rx="2" ry="3" fill="#FFFFFF" opacity="0.85"/></g>
+              <g opacity="0" style="transform-box: fill-box; transform-origin: center; animation: oopsDots 2.4s ease-in-out infinite"><circle cx="84" cy="48" r="3.5" fill="#FFFFFF" stroke="#B8A8FF" stroke-width="2.5"/><circle cx="74" cy="35" r="5" fill="#FFFFFF" stroke="#B8A8FF" stroke-width="2.5"/></g>
+              <g opacity="0" style="transform-box: fill-box; transform-origin: 50% 100%; animation: oopsThink 2.4s ease-in-out infinite"><circle cx="58" cy="12" r="17" fill="#FFFFFF" stroke="#B8A8FF" stroke-width="3"/><text x="58" y="21" text-anchor="middle" font-family="Fredoka, ui-rounded, system-ui, sans-serif" font-weight="700" font-size="25" fill="#6B4EFF">?</text></g>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <h3><span lang="cs">Chyba? Nevadí!</span><span lang="en">Oops? No problem!</span></h3>
+          <p><span lang="cs">Chvilku přemýšlím, otřepu se a zkusíme to znovu. Nikdy se nezlobím a vždycky to skončí úsměvem.</span><span lang="en">I have a little think, shake it off and we try again. I never get cross, and it always ends with a smile.</span></p>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="demo" style="background:#EEEAFF;align-items:flex-end;padding:0 10px 16px">
+          <div class="hats">
+            <img src="assets/hats/taya-pirate.svg" width="200" height="232" alt="Taya s pirátským kloboukem / Taya in a pirate hat">
+            <img src="assets/hats/taya-crown.svg" width="200" height="232" alt="Taya s korunou / Taya wearing a crown">
+            <img src="assets/hats/taya-wizard.svg" width="200" height="232" alt="Taya s kouzelnickým kloboukem / Taya in a wizard hat">
+            <img src="assets/hats/taya-party.svg" width="200" height="232" alt="Taya s párty čepičkou / Taya in a party hat">
+          </div>
+        </div>
+        <div class="body">
+          <h3><span lang="cs">Sbírej hvězdy</span><span lang="en">Collect stars</span></h3>
+          <p><span lang="cs">Za hvězdy dostaneš samolepky do alba a pro mě nové klobouky. Pirátský, nebo korunu?</span><span lang="en">Stars earn stickers for your book, and new hats for me. Pirate hat or a crown?</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Worlds & islands ============ -->
+<section class="band worlds" id="ostrovy">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow" style="color:#0078C1"><span lang="cs">Ostrovy</span><span lang="en">Islands</span></span>
+      <h2><span lang="cs">Dva světy, deset ostrovů</span><span lang="en">Two worlds, ten islands</span></h2>
+      <p>
+        <span lang="cs">Každý ostrov učí jednu věc. Taya skáče po kamenech, jedna lekce za druhou, a když je ostrov hotový, postaví most a vydá se na další.</span>
+        <span lang="en">Every island teaches one thing. Taya hops from stone to stone, one lesson at a time, and when an island is done she builds a bridge to the next one.</span>
+      </p>
+    </div>
+
+    <div class="world math">
+      <div class="world-head reveal">
+        <span class="world-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#8E2C00" stroke-width="3.2" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg></span>
+        <h3><span lang="cs">Matematika</span><span lang="en">Math</span></h3>
+        <p><span lang="cs">Od prvního počítání až po dělení. Úlohy se kreslí na jablíčkách, balóncích a kokosech, takže dítě matematiku vidí, ne jen počítá.</span><span lang="en">From first counting all the way to sharing. Problems are drawn with apples, balloons and coconuts, so kids can see the math, not just the numbers.</span></p>
+      </div>
+      <div class="islands">
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/counting.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true">123</span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov počítání</span><span lang="en">Counting Island</span></h4>
+            <p><span lang="cs">Kolik jich je, ťukni a spočítej, najdi číslo, co přijde dál a čeho je víc.</span><span lang="en">How many, tap to count, find the number, what comes next and which has more.</span></p>
+          </div>
+        </article>
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/plus.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#8E2C00" stroke-width="3.2" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg></span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov sčítání</span><span lang="en">Plus Island</span></h4>
+            <p><span lang="cs">Sčítání do 10 a pak do 20, doplňování do desítky, dvojice a malé slovní úlohy.</span><span lang="en">Adding to 10, then to 20, making ten, doubles and little story problems.</span></p>
+          </div>
+        </article>
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/minus.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#8E2C00" stroke-width="3.2" stroke-linecap="round"><path d="M6 12h12"/></svg></span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov odčítání</span><span lang="en">Minus Island</span></h4>
+            <p><span lang="cs">Ubírání, porovnávání, chybějící část a početní rodinky, které k sobě patří.</span><span lang="en">Taking away, comparing, the missing part and fact families that belong together.</span></p>
+          </div>
+        </article>
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/times.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#8E2C00" stroke-width="3.2" stroke-linecap="round"><path d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov násobení</span><span lang="en">Times Island</span></h4>
+            <p><span lang="cs">Stejné skupinky, počítání po skocích, řádky a sloupce a jak ze sčítání vznikne násobení.</span><span lang="en">Equal groups, skip counting, rows and columns, and how adding turns into times.</span></p>
+          </div>
+        </article>
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/share.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#8E2C00" stroke-width="3.2" stroke-linecap="round"><path d="M6 12h12"/><circle cx="12" cy="6.5" r="1.9" fill="#8E2C00" stroke="none"/><circle cx="12" cy="17.5" r="1.9" fill="#8E2C00" stroke="none"/></svg></span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov dělení</span><span lang="en">Share Island</span></h4>
+            <p><span lang="cs">Spravedlivé dělení mezi kamarády, skupinky, poloviny a dělení pomocí násobilky.</span><span lang="en">Fair shares between friends, grouping, halves and sharing with times tables.</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="world words">
+      <div class="world-head reveal">
+        <span class="world-badge" aria-hidden="true">Aa</span>
+        <h3><span lang="cs">Čtení</span><span lang="en">Words</span></h3>
+        <p><span lang="cs">Písmena, hlásky, skládání, slova a první příběhy. Ostrov písmen už je otevřený, další ostrovy se právě kreslí.</span><span lang="en">Letters, sounds, blending, words and first stories. Letter Island is open, and the next islands are being drawn right now.</span></p>
+      </div>
+      <div class="islands">
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/letter.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true">Aa</span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov písmen</span><span lang="en">Letter Island</span></h4>
+            <p><span lang="cs">Najdi písmeno podle zvuku, spoj malé s velkým, seřaď je a obtáhni prstem.</span><span lang="en">Hear a letter and find it, match small and big, put letters in order and trace them.</span></p>
+          </div>
+        </article>
+        <div class="soon-card reveal">
+          <h4><span lang="cs">Brzy na mapě</span><span lang="en">Coming to the map</span></h4>
+          <p><span lang="cs">Ostrovy, na kterých se z písmen stanou slova a ze slov příběhy.</span><span lang="en">Islands where letters become words, and words become stories.</span></p>
+          <div class="chips">
+            <span class="chip"><i>/s/</i><span lang="cs">Ostrov hlásek</span><span lang="en">Sound Island</span></span>
+            <span class="chip"><i>s·a</i><span lang="cs">Ostrov skládání</span><span lang="en">Blend Island</span></span>
+            <span class="chip"><i><span lang="cs">les</span><span lang="en">cat</span></i><span lang="cs">Ostrov slov</span><span lang="en">Word Island</span></span>
+            <span class="chip"><i>abc</i><span lang="cs">Ostrov příběhů</span><span lang="en">Story Island</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="path-note reveal">
+      <div class="stones" aria-hidden="true"><span class="done"></span><span class="done"></span><span class="now"></span><span></span></div>
+      <div>
+        <h3><span lang="cs">Kámen po kameni</span><span lang="en">Stone by stone</span></h3>
+        <p><span lang="cs">Každý kámen na mapě je krátká lekce. Na konci ostrova čeká truhla s pokladem a most, který Taya postaví prkno po prknu.</span><span lang="en">Every stone on the map is a short lesson. At the end of each island there’s a treasure chest, and a bridge Taya builds plank by plank.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Every try counts ============ -->
+<section class="band tries">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow"><span lang="cs">Jak se s Tayou učí</span><span lang="en">How it feels</span></span>
+      <h2><span lang="cs">Každý pokus se počítá</span><span lang="en">Every try counts</span></h2>
+      <p>
+        <span lang="cs">Každé ťuknutí dostane odpověď. Správná odpověď zajiskří, chyba se jen jemně zavrtí. Žádný bzučák, žádné červené blikání, žádné ztracené životy.</span>
+        <span lang="en">Every tap gets an answer. A right answer sparkles, a miss just wobbles gently. No buzzer, no red flash, no lost lives.</span>
+      </p>
+    </div>
+    <div class="grid">
+      <article class="card reveal">
+        <div class="demo">
+          <div style="position:relative;width:140px;height:104px">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="#FFC61A" aria-hidden="true" style="position:absolute;left:-30px;top:-22px;animation:spark 2.4s ease-out infinite"><use href="#sp"/></svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#FFC61A" aria-hidden="true" style="position:absolute;right:-28px;top:-26px;animation:spark 2.4s ease-out .06s infinite"><use href="#sp"/></svg>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="#1FC48A" aria-hidden="true" style="position:absolute;left:-26px;bottom:-4px;animation:spark 2.4s ease-out .1s infinite"><use href="#sp"/></svg>
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="#FFC61A" aria-hidden="true" style="position:absolute;right:-34px;bottom:6px;animation:spark 2.4s ease-out .08s infinite"><use href="#sp"/></svg>
+            <div class="tile" aria-hidden="true" style="animation:okPop 2.4s var(--spring) infinite, okColor 2.4s linear infinite">12</div>
+            <span class="badge" aria-hidden="true" style="background:#00864F"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          </div>
+        </div>
+        <div class="body">
+          <h3><span lang="cs">Správně!</span><span lang="en">That’s it!</span></h3>
+          <p><span lang="cs">Dlaždice poskočí, zezelená, dostane fajfku a rozhodí pár jiskřiček.</span><span lang="en">The tile pops, turns green, earns a check and throws a few sparkles.</span></p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="demo">
+          <div style="position:relative;width:140px;height:104px;animation:wobble 2.4s ease-in-out infinite">
+            <div class="tile" aria-hidden="true" style="animation:noColor 2.4s linear infinite">15</div>
+            <span class="badge" aria-hidden="true" style="background:#D93829"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3"/><path d="M4.5 4.5v4.2h4.2"/></svg></span>
+          </div>
+        </div>
+        <div class="body">
+          <h3><span lang="cs">Zkus to znovu</span><span lang="en">Try again</span></h3>
+          <p><span lang="cs">Jen jemné zavrtění hlavou. Když to nejde, Taya ukáže nápovědu přímo na obrázku.</span><span lang="en">Just a gentle head-shake. When it’s tricky, Taya shows a hint right on the picture.</span></p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="demo">
+          <svg viewBox="0 0 160 160" width="170" height="170" role="img" aria-label="A star spinning in and landing">
+            <g style="transform-origin: 80px 80px; animation: rays 2.4s ease-out infinite" fill="none" stroke="#FFC61A" stroke-width="6" stroke-linecap="round">
+              <path d="M136 80L150 80"/><path d="M119.6 40.4L129.5 30.5"/><path d="M80 24L80 10"/><path d="M40.4 40.4L30.5 30.5"/><path d="M24 80L10 80"/><path d="M40.4 119.6L30.5 129.5"/><path d="M80 136L80 150"/><path d="M119.6 119.6L129.5 129.5"/>
+            </g>
+            <g style="transform-origin: 80px 80px; animation: starIn 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) infinite">
+              <path transform="translate(44 44) scale(3)" d="M12 2.8l2.75 5.6 6.15.9-4.45 4.33 1.05 6.12L12 16.87l-5.5 2.88 1.05-6.12L3.1 9.3l6.15-.9L12 2.8z" fill="#FFC61A" stroke="#E09F00" stroke-width="1.3" stroke-linejoin="round"/>
+              <ellipse cx="74" cy="77" rx="4.5" ry="2.6" fill="#FFFFFF" opacity="0.6" transform="rotate(-35 74 77)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <h3><span lang="cs">Hvězda!</span><span lang="en">A star!</span></h3>
+          <p><span lang="cs">Za každou lekci padají hvězdy a za hvězdy se otevírají samolepky. Pokrok je vidět na první pohled.</span><span lang="en">Every lesson rains stars, and stars unlock stickers. Progress you can see at a glance.</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ For parents ============ -->
+<section class="band parents" id="rodice">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow"><span lang="cs">Pro rodiče</span><span lang="en">For parents</span></span>
+      <h2><span lang="cs">Klidné místo na učení</span><span lang="en">A calm place to learn</span></h2>
+      <p>
+        <span lang="cs">Taya je laskavá, trpělivá a vždycky na straně dítěte. Vy máte přehled a nemusíte se bát, kam dítě ťukne.</span>
+        <span lang="en">Taya is kind, patient and always on your child’s side. You stay in the loop, and never have to worry what they might tap on.</span>
+      </p>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="ic" style="background:#DDF7EA"><svg viewBox="0 0 24 24" fill="none" stroke="#00864F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6L12 3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+        <h3><span lang="cs">Bez reklam a sledování</span><span lang="en">No ads, no tracking</span></h3>
+        <p><span lang="cs">Žádné účty, žádná analytika, žádné nástroje třetích stran. Aplikace se k internetu vůbec nepřipojuje.</span><span lang="en">No accounts, no analytics, no third-party tools. The app never connects to the internet.</span></p>
+      </article>
+      <article class="pillar reveal">
+        <span class="ic" style="background:#EEEAFF"><svg viewBox="0 0 24 24" fill="none" stroke="#4B2FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L12 19V5L7.5 9.5H4z"/><path d="M15.5 9a4 4 0 0 1 0 6"/><path d="M18 6.5a7.5 7.5 0 0 1 0 11"/></svg></span>
+        <h3><span lang="cs">Čte nahlas</span><span lang="en">Reads aloud</span></h3>
+        <p><span lang="cs">Taya otázky předčítá, takže si poradí i děti, které ještě samy nečtou. Předčítání vypnete jedním přepínačem.</span><span lang="en">Taya reads every question aloud, so even kids who can’t read yet can play. One switch turns it off.</span></p>
+      </article>
+      <article class="pillar reveal">
+        <span class="ic" style="background:#FFF4CF"><svg viewBox="0 0 24 24" fill="#E09F00" aria-hidden="true"><use href="#sp"/></svg></span>
+        <h3><span lang="cs">Hra na prvním místě</span><span lang="en">Play first</span></h3>
+        <p><span lang="cs">Každá lekce působí jako hra a úlohy jsou pokaždé jiné. Dítě se učí, protože ho to baví.</span><span lang="en">Every lesson feels like a game, and the problems are different every time. Kids learn because it’s fun.</span></p>
+      </article>
+      <article class="pillar reveal">
+        <span class="ic" style="background:#FFEBDA"><svg viewBox="0 0 24 24" fill="none" stroke="#C25200" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="3"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></span>
+        <h3><span lang="cs">Koutek pro rodiče</span><span lang="en">Grown-ups corner</span></h3>
+        <p><span lang="cs">Za kontrolou pro dospělé uvidíte, kolik dítě tento týden hrálo, a nastavíte denní čas na hraní.</span><span lang="en">Behind a parent check you’ll see how much your child played this week, and set a daily play time.</span></p>
+      </article>
+      <article class="pillar reveal">
+        <span class="ic" style="background:#E1F3FF"><svg viewBox="0 0 24 24" fill="none" stroke="#0078C1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.4 2.3 3.5 5.3 3.5 8.5s-1.1 6.2-3.5 8.5c-2.4-2.3-3.5-5.3-3.5-8.5S9.6 5.8 12 3.5z"/></svg></span>
+        <h3><span lang="cs">Česky i anglicky</span><span lang="en">Czech and English</span></h3>
+        <p><span lang="cs">Jazyk se řídí nastavením zařízení a v koutku pro rodiče ho kdykoli přepnete.</span><span lang="en">The language follows the device, and you can switch it any time in the grown-ups corner.</span></p>
+      </article>
+      <article class="pillar reveal">
+        <span class="ic" style="background:#FFE7F0"><svg viewBox="0 0 24 24" fill="none" stroke="#B0306A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+        <h3><span lang="cs">Ví, kdy přestat</span><span lang="en">Knows when to stop</span></h3>
+        <p><span lang="cs">Když vyprší denní čas, Taya se rozloučí: „To je pro dnešek všechno!“ Žádné nekonečné scrollování.</span><span lang="en">When the daily time is up, Taya says goodbye: “That’s all for today!” No endless scrolling.</span></p>
+      </article>
+    </div>
+
+    <div class="privacy-strip reveal">
+      <p><span lang="cs">Vše, co dítě v aplikaci udělá, zůstává jen v jeho zařízení. Nic nesbíráme a nikam nic neposíláme.</span><span lang="en">Everything a child does in the app stays on their device. We collect nothing and send nothing anywhere.</span></p>
+      <a href="privacy/"><span lang="cs">Zásady ochrany soukromí →</span><span lang="en">Privacy policy →</span></a>
+    </div>
+
+    <h3 class="voice-title reveal"><span lang="cs">Jak Taya mluví</span><span lang="en">How Taya talks</span></h3>
+    <div class="voice">
+      <div class="say reveal">
+        <div class="row yes"><b>Taya</b><span><span lang="cs">Skoro! Zkusíme to znovu.</span><span lang="en">Almost! Let’s try again.</span></span></div>
+        <div class="row no"><b><span lang="cs">Nikdy</span><span lang="en">Never</span></b><span><span lang="cs">Špatná odpověď.</span><span lang="en">Wrong answer.</span></span></div>
+      </div>
+      <div class="say reveal">
+        <div class="row yes"><b>Taya</b><span><span lang="cs">Všech 12 jablek spočítáno!</span><span lang="en">You counted all 12 apples!</span></span></div>
+        <div class="row no"><b><span lang="cs">Nikdy</span><span lang="en">Never</span></b><span><span lang="cs">Správně. Pokračujte další otázkou.</span><span lang="en">Correct. Proceed to the next question.</span></span></div>
+      </div>
+      <div class="say reveal">
+        <div class="row yes"><b>Taya</b><span><span lang="cs">Dáme ještě jednu?</span><span lang="en">Ready for one more?</span></span></div>
+        <div class="row no"><b><span lang="cs">Nikdy</span><span lang="en">Never</span></b><span><span lang="cs">Musíš dokončit ještě 5 lekcí.</span><span lang="en">You must finish 5 more lessons.</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ About the project ============ -->
+<section class="band project" id="projekt">
+  <div class="wrap">
+    <div class="grid">
+      <div class="story reveal">
+        <span class="eyebrow"><span lang="cs">O projektu</span><span lang="en">About the project</span></span>
+        <h2 style="font-size:clamp(34px,5vw,54px)"><span lang="cs">Proč vzniká Taya</span><span lang="en">Why we’re making Taya</span></h2>
+        <p>
+          <span lang="cs">Tayu tvoříme v <strong>HAVITu</strong>, české softwarové firmě z Prahy. Chtěli jsme aplikaci, kterou bychom s klidem dali vlastním dětem: hravou, laskavou a bez reklam a triků, které děti drží u obrazovky.</span>
+          <span lang="en">We’re making Taya at <strong>HAVIT</strong>, a Czech software company from Prague. We wanted an app we’d happily hand to our own kids: playful, kind, and free of ads and tricks that keep kids glued to the screen.</span>
+        </p>
+        <p>
+          <span lang="cs">Začínáme matematikou a čtením. Každý ostrov má vlastní ilustrace, animace a namluvené otázky a nové ostrovy i předměty postupně přibývají.</span>
+          <span lang="en">We’re starting with math and reading. Every island has its own illustrations, animations and recorded questions, and new islands and subjects keep arriving.</span>
+        </p>
+        <div class="stickers" aria-hidden="true">
+          <img src="assets/stickers/crab.svg" alt="" width="64" height="64" loading="lazy">
+          <img src="assets/stickers/palm.svg" alt="" width="64" height="64" loading="lazy">
+          <img src="assets/stickers/shell.svg" alt="" width="64" height="64" loading="lazy">
+          <img src="assets/stickers/starfish.svg" alt="" width="64" height="64" loading="lazy">
+          <img src="assets/stickers/boat.svg" alt="" width="64" height="64" loading="lazy">
+        </div>
+      </div>
+      <div class="facts">
+        <div class="fact reveal">
+          <span class="n">1</span>
+          <div>
+            <h3><span lang="cs">Navrženo pro malé ruce</span><span lang="en">Made for small hands</span></h3>
+            <p><span lang="cs">Velká tlačítka, krátké věty, které zní dobře nahlas, a jasná cesta po mapě. Dítě nepotřebuje pomoc dospělého.</span><span lang="en">Big buttons, short lines that sound right read aloud, and a clear path across the map. No grown-up needed.</span></p>
+          </div>
+        </div>
+        <div class="fact reveal">
+          <span class="n">2</span>
+          <div>
+            <h3><span lang="cs">Každá animace má smysl</span><span lang="en">Every animation means something</span></h3>
+            <p><span lang="cs">Ťuknutí odpoví, výhra zajiskří, chyba se zavrtí a nikdy netrestá. Velká radost je schovaná na konec lekce.</span><span lang="en">Taps answer, wins sparkle, mistakes wobble and never punish. The big celebration waits for the end of a lesson.</span></p>
+          </div>
+        </div>
+        <div class="fact reveal">
+          <span class="n">3</span>
+          <div>
+            <h3><span lang="cs">Soukromí na prvním místě</span><span lang="en">Privacy by default</span></h3>
+            <p><span lang="cs">Žádné účty ani data v cloudu. Postup, hvězdy a nastavení zůstávají v zařízení.</span><span lang="en">No accounts and no cloud data. Progress, stars and settings stay on the device.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Download ============ -->
+<section class="band cta" id="stahnout">
+  <div class="wrap">
+    <div class="confetti-box" aria-hidden="true">
+      <span style="left:20%;top:16%;width:14px;height:14px;border-radius:3px;background:#FFC61A"></span>
+      <span style="left:34%;top:6%;width:12px;height:12px;border-radius:50%;background:#1FC48A;animation-delay:.08s"></span>
+      <span style="right:22%;top:10%;width:14px;height:10px;border-radius:3px;background:#FF5FA2;animation-delay:.04s"></span>
+      <span style="right:12%;top:24%;width:12px;height:12px;border-radius:50%;background:#22A6F2;animation-delay:.12s"></span>
+      <span style="left:10%;top:32%;width:10px;height:14px;border-radius:3px;background:#FFFFFF;animation-delay:.16s"></span>
+      <span style="right:36%;top:2%;width:11px;height:11px;border-radius:2px;background:#FF8A1F;animation-delay:.1s"></span>
+      <svg viewBox="0 0 200 200" width="240" height="240" role="img" aria-label="Taya cheering">
+        <ellipse cx="100" cy="191" rx="54" ry="7" fill="#231E3D" opacity="0.2" style="transform-box: fill-box; transform-origin: center; animation: jumpShadow 2.4s ease-in-out infinite"/>
+        <g style="transform-origin: 100px 190px; animation: jump 2.4s ease-in-out infinite">
+          <path d="M100 6 C101 16 107 22 117 23 C107 24 101 30 100 40 C99 30 93 24 83 23 C93 22 99 16 100 6 Z" fill="#FFC61A"/>
+          <path d="M50 96 C38 66 42 38 58 28 C73 34 86 54 91 70 Z" fill="#7A5FFF"/>
+          <path d="M150 96 C162 66 158 38 142 28 C127 34 114 54 109 70 Z" fill="#7A5FFF"/>
+          <path d="M57 82 C51 64 53 49 61 42 C70 48 78 60 81 70 Z" fill="#FFACCE"/>
+          <path d="M143 82 C149 64 147 49 139 42 C130 48 122 60 119 70 Z" fill="#FFACCE"/>
+          <ellipse cx="76" cy="180" rx="19" ry="10" fill="#2B1F7A"/>
+          <ellipse cx="124" cy="180" rx="19" ry="10" fill="#2B1F7A"/>
+          <path d="M100 54 C150 54 172 92 172 128 C172 164 140 184 100 184 C60 184 28 164 28 128 C28 92 50 54 100 54 Z" fill="#7A5FFF"/>
+          <ellipse cx="100" cy="151" rx="44" ry="30" fill="#EEEAFF"/>
+          <ellipse cx="66" cy="80" rx="16" ry="8" fill="#FFFFFF" opacity="0.25" transform="rotate(-32 66 80)"/>
+          <ellipse cx="28" cy="98" rx="11" ry="20" fill="#4B2FD6" transform="rotate(-32 28 98)"/>
+          <ellipse cx="172" cy="98" rx="11" ry="20" fill="#4B2FD6" transform="rotate(32 172 98)"/>
+          <path d="M66 113 Q79 99 92 113" fill="none" stroke="#231E3D" stroke-width="5.5" stroke-linecap="round"/>
+          <path d="M108 113 Q121 99 134 113" fill="none" stroke="#231E3D" stroke-width="5.5" stroke-linecap="round"/>
+          <ellipse cx="60" cy="130" rx="9" ry="5.5" fill="#FFACCE"/>
+          <ellipse cx="140" cy="130" rx="9" ry="5.5" fill="#FFACCE"/>
+          <path d="M86 127 Q100 151 114 127 Z" fill="#231E3D" stroke="#231E3D" stroke-width="3" stroke-linejoin="round"/>
+          <ellipse cx="100" cy="135" rx="6.5" ry="3.5" fill="#FF7DB3"/>
+        </g>
+      </svg>
+    </div>
+    <div>
+      <h2><span lang="cs">Vyplujte s Tayou na ostrovy</span><span lang="en">Set sail with Taya</span></h2>
+      <p><span lang="cs">Stáhněte si Tayu do telefonu nebo tabletu a první ostrov může začít ještě dnes.</span><span lang="en">Get Taya on your phone or tablet, and the first island can start today.</span></p>
+      <div class="stores">
+        <a class="store" data-store="ios" href="#stahnout">
+          <svg aria-hidden="true"><use href="#i-phone"/></svg>
+          <span class="t"><small><span lang="cs">Stáhnout v</span><span lang="en">Download on the</span></small><strong>App Store</strong></span>
+        </a>
+        <a class="store" data-store="android" href="#stahnout">
+          <svg aria-hidden="true"><use href="#i-play"/></svg>
+          <span class="t"><small><span lang="cs">Stáhnout na</span><span lang="en">Get it on</span></small><strong>Google Play</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="wordmark" href="#top" aria-label="Taya">
+      <span class="l"><span>t</span></span><span class="l"><span>a</span></span><span class="l"><span>y</span></span><span class="l"><span>a</span></span>
+      <svg class="spark" fill="#FFC61A" aria-hidden="true"><use href="#sp"/></svg>
+    </a>
+    <nav aria-label="Footer">
+      <a href="privacy/"><span lang="cs">Zásady ochrany soukromí</span><span lang="en">Privacy policy</span></a>
+      <a href="mailto:crha@havit.cz"><span lang="cs">Kontakt</span><span lang="en">Contact</span></a>
+    </nav>
+    <small>© 2026 HAVIT, s.r.o. · Budějovická 3a, 140 00 <span lang="cs">Praha 4</span><span lang="en">Prague 4</span></small>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

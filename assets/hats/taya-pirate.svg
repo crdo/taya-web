@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 200 232" width="200" height="232" role="img" aria-label="Taya wearing the pirate hat">
+<g>
+<g transform="translate(0 -24)"><path d="M100 6 C101 16 107 22 117 23 C107 24 101 30 100 40 C99 30 93 24 83 23 C93 22 99 16 100 6 Z" fill="#FFC61A"></path></g>
+<path d="M50 96 C38 66 42 38 58 28 C73 34 86 54 91 70 Z" fill="#7A5FFF"></path>
+<path d="M150 96 C162 66 158 38 142 28 C127 34 114 54 109 70 Z" fill="#7A5FFF"></path>
+<path d="M57 82 C51 64 53 49 61 42 C70 48 78 60 81 70 Z" fill="#FFACCE"></path>
+<path d="M143 82 C149 64 147 49 139 42 C130 48 122 60 119 70 Z" fill="#FFACCE"></path>
+<ellipse cx="76" cy="180" rx="19" ry="10" fill="#2B1F7A"></ellipse>
+<ellipse cx="124" cy="180" rx="19" ry="10" fill="#2B1F7A"></ellipse>
+<path d="M100 54 C150 54 172 92 172 128 C172 164 140 184 100 184 C60 184 28 164 28 128 C28 92 50 54 100 54 Z" fill="#7A5FFF"></path>
+<ellipse cx="100" cy="151" rx="44" ry="30" fill="#EEEAFF"></ellipse>
+<ellipse cx="66" cy="80" rx="16" ry="8" fill="#FFFFFF" opacity="0.25" transform="rotate(-32 66 80)"></ellipse>
+<ellipse cx="33" cy="140" rx="11" ry="17" fill="#4B2FD6" transform="rotate(18 33 140)"></ellipse>
+<ellipse cx="167" cy="140" rx="11" ry="17" fill="#4B2FD6" transform="rotate(-18 167 140)"></ellipse>
+<g>
+<ellipse cx="79" cy="110" rx="15" ry="18" fill="#FFFFFF"></ellipse>
+<ellipse cx="121" cy="110" rx="15" ry="18" fill="#FFFFFF"></ellipse>
+<ellipse cx="81" cy="113" rx="9" ry="11" fill="#231E3D"></ellipse>
+<ellipse cx="119" cy="113" rx="9" ry="11" fill="#231E3D"></ellipse>
+<circle cx="84.5" cy="108" r="3.4" fill="#FFFFFF"></circle>
+<circle cx="122.5" cy="108" r="3.4" fill="#FFFFFF"></circle>
+</g>
+<ellipse cx="60" cy="133" rx="9" ry="5.5" fill="#FFACCE"></ellipse>
+<ellipse cx="140" cy="133" rx="9" ry="5.5" fill="#FFACCE"></ellipse>
+<path d="M88 130 Q100 146 112 130 Z" fill="#231E3D" stroke="#231E3D" stroke-width="3" stroke-linejoin="round"></path>
+<g><g><path d="M48 70 C54 44 76 30 100 30 C124 30 146 44 152 70 C134 60 66 60 48 70 Z" fill="#231E3D"></path><path d="M48 70 C66 60 134 60 152 70" fill="none" stroke="#FFC61A" stroke-width="4" stroke-linecap="round"></path><path d="M60 52 C74 42 126 42 140 52" fill="none" stroke="#5E5878" stroke-width="2" stroke-linecap="round" opacity="0.7"></path><circle cx="100" cy="48" r="9.5" fill="#FFFFFF"></circle><rect x="94" y="54" width="12" height="6" rx="2" fill="#FFFFFF"></rect><circle cx="96.5" cy="47" r="2.2" fill="#231E3D"></circle><circle cx="103.5" cy="47" r="2.2" fill="#231E3D"></circle><path d="M96 52 Q100 55 104 52" fill="none" stroke="#231E3D" stroke-width="1.4" stroke-linecap="round"></path><path d="M140 52 C150 40 162 36 170 38 C164 42 156 48 150 58 Z" fill="#FF5A47"></path><ellipse cx="74" cy="44" rx="7" ry="2.6" fill="#FFFFFF" opacity="0.18" transform="rotate(-25 74 44)"></ellipse></g></g>
+</g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 200 232" width="200" height="232" role="img" aria-label="Taya wearing the crown">
+<g>
+<g transform="translate(0 -30)"><path d="M100 6 C101 16 107 22 117 23 C107 24 101 30 100 40 C99 30 93 24 83 23 C93 22 99 16 100 6 Z" fill="#FFC61A"></path></g>
+<path d="M50 96 C38 66 42 38 58 28 C73 34 86 54 91 70 Z" fill="#7A5FFF"></path>
+<path d="M150 96 C162 66 158 38 142 28 C127 34 114 54 109 70 Z" fill="#7A5FFF"></path>
+<path d="M57 82 C51 64 53 49 61 42 C70 48 78 60 81 70 Z" fill="#FFACCE"></path>
+<path d="M143 82 C149 64 147 49 139 42 C130 48 122 60 119 70 Z" fill="#FFACCE"></path>
+<ellipse cx="76" cy="180" rx="19" ry="10" fill="#2B1F7A"></ellipse>
+<ellipse cx="124" cy="180" rx="19" ry="10" fill="#2B1F7A"></ellipse>
+<path d="M100 54 C150 54 172 92 172 128 C172 164 140 184 100 184 C60 184 28 164 28 128 C28 92 50 54 100 54 Z" fill="#7A5FFF"></path>
+<ellipse cx="100" cy="151" rx="44" ry="30" fill="#EEEAFF"></ellipse>
+<ellipse cx="66" cy="80" rx="16" ry="8" fill="#FFFFFF" opacity="0.25" transform="rotate(-32 66 80)"></ellipse>
+<ellipse cx="33" cy="140" rx="11" ry="17" fill="#4B2FD6" transform="rotate(18 33 140)"></ellipse>
+<ellipse cx="167" cy="140" rx="11" ry="17" fill="#4B2FD6" transform="rotate(-18 167 140)"></ellipse>
+<g>
+<ellipse cx="79" cy="110" rx="15" ry="18" fill="#FFFFFF"></ellipse>
+<ellipse cx="121" cy="110" rx="15" ry="18" fill="#FFFFFF"></ellipse>
+<ellipse cx="81" cy="113" rx="9" ry="11" fill="#231E3D"></ellipse>
+<ellipse cx="119" cy="113" rx="9" ry="11" fill="#231E3D"></ellipse>
+<circle cx="84.5" cy="108" r="3.4" fill="#FFFFFF"></circle>
+<circle cx="122.5" cy="108" r="3.4" fill="#FFFFFF"></circle>
+</g>
+<ellipse cx="60" cy="133" rx="9" ry="5.5" fill="#FFACCE"></ellipse>
+<ellipse cx="140" cy="133" rx="9" ry="5.5" fill="#FFACCE"></ellipse>
+<path d="M88 130 Q100 146 112 130 Z" fill="#231E3D" stroke="#231E3D" stroke-width="3" stroke-linejoin="round"></path>
+<g><g transform="rotate(-4 100 56)"><path d="M68 64 L64 30 L80 44 L91 22 L100 40 L109 22 L120 44 L136 30 L132 64 Z" fill="#FFC61A" stroke="#E09F00" stroke-width="2.5" stroke-linejoin="round"></path><path d="M68 56 H132" stroke="#E09F00" stroke-width="2.5"></path><rect x="67" y="56" width="66" height="9" rx="3" fill="#FFDE73"></rect><circle cx="64" cy="29" r="4" fill="#FFFFFF"></circle><circle cx="91" cy="21" r="4" fill="#FFFFFF"></circle><circle cx="109" cy="21" r="4" fill="#FFFFFF"></circle><circle cx="136" cy="29" r="4" fill="#FFFFFF"></circle><path d="M100 44 L106 51 L100 58 L94 51 Z" fill="#FF5A47" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="80" cy="56" r="3.6" fill="#22A6F2"></circle><circle cx="120" cy="56" r="3.6" fill="#1FC48A"></circle><path d="M74 40 L78 36" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" opacity="0.7"></path></g></g>
+</g>
+</svg>
