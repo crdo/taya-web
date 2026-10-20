@@ -52,25 +52,34 @@
 
   // ---------- Store buttons ----------
   var links = window.TAYA_STORES || {};
-  document.querySelectorAll(".store[data-store]").forEach(function (a) {
-    var url = links[a.getAttribute("data-store")];
-    if (url) {
-      a.href = url;
-      a.rel = "noopener";
-    } else {
-      a.classList.add("soon");
-      a.removeAttribute("href");
-      a.setAttribute("role", "link");
-      a.setAttribute("aria-disabled", "true");
-      // The official badges stay untouched (no dimming, nothing on top); a line under them says "coming soon".
-      var row = a.parentNode;
-      if (!row.querySelector(".stores-soon")) {
-        var note = document.createElement("p");
-        note.className = "stores-soon";
-        note.setAttribute("aria-hidden", "true");
-        note.innerHTML = '<span lang="cs">Již brzy v App Store a na Google Play</span><span lang="en">Coming soon to the App Store and Google Play</span>';
-        row.appendChild(note);
+  var soonNotes = {
+    both: '<span lang="cs">Již brzy v App Store a na Google Play</span><span lang="en">Coming soon to the App Store and Google Play</span>',
+    ios: '<span lang="cs">V App Store již brzy</span><span lang="en">Coming soon to the App Store</span>',
+    android: '<span lang="cs">Na Google Play již brzy</span><span lang="en">Coming soon to Google Play</span>'
+  };
+  document.querySelectorAll(".stores").forEach(function (row) {
+    var missing = [];
+    row.querySelectorAll(".store[data-store]").forEach(function (a) {
+      var store = a.getAttribute("data-store");
+      var url = links[store];
+      if (url) {
+        a.href = url;
+        a.rel = "noopener";
+      } else {
+        missing.push(store);
+        a.classList.add("soon");
+        a.removeAttribute("href");
+        a.setAttribute("role", "link");
+        a.setAttribute("aria-disabled", "true");
       }
+    });
+    // The official badges stay untouched (no dimming, nothing on top); a line under them names the stores still to come.
+    if (missing.length) {
+      var note = document.createElement("p");
+      note.className = "stores-soon";
+      note.setAttribute("aria-hidden", "true");
+      note.innerHTML = missing.length > 1 ? soonNotes.both : soonNotes[missing[0]];
+      row.appendChild(note);
     }
   });
 

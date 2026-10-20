@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606 834" width="606" height="834" aria-hidden="true">
-<style>@keyframes boat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-2px) rotate(2deg)}}@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes cloud{0%,100%{transform:translateX(0)}50%{transform:translateX(-8px)}}@keyframes flow{to{stroke-dashoffset:-20}}@keyframes wave{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}@keyframes drift{0%,100%{transform:translateY(0) scale(1);opacity:.9}50%{transform:translateY(-6px) scale(.85);opacity:.5}}@media (prefers-reduced-motion: reduce){*{animation:none !important}}</style>
+<style>@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes twinkle{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.22) rotate(18deg)}}@media (prefers-reduced-motion: reduce){*{animation:none !important}}</style>
 <defs><linearGradient id="skyP" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CDEBFF"></stop><stop offset="0.6" stop-color="#E1F3FF"></stop><stop offset="1" stop-color="#F2FAFF"></stop></linearGradient></defs><rect x="0" y="0" width="606" height="834" fill="url(#skyP)"></rect>
 
 <g transform="matrix(1.42 0 0 1.42 26.1 -76.6)">
