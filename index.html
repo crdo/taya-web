@@ -25,8 +25,6 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="sp" viewBox="0 0 24 24"><path d="M12 1.5C12.6 7.4 16.6 11.4 22.5 12C16.6 12.6 12.6 16.6 12 22.5C11.4 16.6 7.4 12.6 1.5 12C7.4 11.4 11.4 7.4 12 1.5Z"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.6-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
 </svg>
 
 <header class="topbar" id="top">
@@ -71,14 +69,8 @@
         <span lang="en">Math and reading for kids aged 5 to 10. On islands full of games, with a friend who is always on their side.</span>
       </p>
       <div class="stores">
-        <a class="store" data-store="ios" href="#stahnout">
-          <svg aria-hidden="true"><use href="#i-phone"/></svg>
-          <span class="t"><small><span lang="cs">Stáhnout v</span><span lang="en">Download on the</span></small><strong>App Store</strong></span>
-        </a>
-        <a class="store" data-store="android" href="#stahnout">
-          <svg aria-hidden="true"><use href="#i-play"/></svg>
-          <span class="t"><small><span lang="cs">Stáhnout na</span><span lang="en">Get it on</span></small><strong>Google Play</strong></span>
-        </a>
+        <a class="store" data-store="ios" data-name="App Store" href="#stahnout"><img lang="cs" src="assets/badges/app-store-cs.svg" width="120" height="40" alt="Stáhnout v App Store"><img lang="en" src="assets/badges/app-store-en.svg" width="120" height="40" alt="Download on the App Store"></a>
+        <a class="store" data-store="android" data-name="Google Play" href="#stahnout"><img lang="cs" src="assets/badges/google-play-cs.png" width="646" height="192" alt="Rozjeďte to na Google Play"><img lang="en" src="assets/badges/google-play-en.png" width="564" height="168" alt="Get it on Google Play"></a>
       </div>
       <p class="note"><span lang="cs">Bez reklam. Bez účtu. Funguje i bez internetu. První ostrovy zdarma.</span><span lang="en">No ads. No account. Works offline. First islands free.</span></p>
     </div>
@@ -339,7 +331,7 @@
       <div class="world-head reveal">
         <span class="world-badge" aria-hidden="true">Aa</span>
         <h3><span lang="cs">Čtení</span><span lang="en">Words</span></h3>
-        <p><span lang="cs">Písmena, hlásky, skládání, slova a první příběhy. Ostrov písmen už je otevřený, další ostrovy se právě kreslí.</span><span lang="en">Letters, sounds, blending, words and first stories. Letter Island is open, and the next islands are being drawn right now.</span></p>
+        <p><span lang="cs">Písmena, hlásky, skládání, slova a první příběhy. Pět ostrovů od prvního písmenka až po čtení s porozuměním, v češtině i angličtině.</span><span lang="en">Letters, sounds, blending, words and first stories. Five islands from the very first letter to reading for meaning, in Czech and English.</span></p>
       </div>
       <div class="islands">
         <article class="island reveal">
@@ -350,16 +342,38 @@
             <p><span lang="cs">Najdi písmeno podle zvuku, spoj malé s velkým, seřaď je a obtáhni prstem.</span><span lang="en">Hear a letter and find it, match small and big, put letters in order and trace them.</span></p>
           </div>
         </article>
-        <div class="soon-card reveal">
-          <h4><span lang="cs">Brzy na mapě</span><span lang="en">Coming to the map</span></h4>
-          <p><span lang="cs">Ostrovy, na kterých se z písmen stanou slova a ze slov příběhy.</span><span lang="en">Islands where letters become words, and words become stories.</span></p>
-          <div class="chips">
-            <span class="chip"><i>/s/</i><span lang="cs">Ostrov hlásek</span><span lang="en">Sound Island</span></span>
-            <span class="chip"><i>s·a</i><span lang="cs">Ostrov skládání</span><span lang="en">Blend Island</span></span>
-            <span class="chip"><i><span lang="cs">les</span><span lang="en">cat</span></i><span lang="cs">Ostrov slov</span><span lang="en">Word Island</span></span>
-            <span class="chip"><i>abc</i><span lang="cs">Ostrov příběhů</span><span lang="en">Story Island</span></span>
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/sound.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true">/s/</span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov hlásek</span><span lang="en">Sound Island</span></h4>
+            <p><span lang="cs">Najdi hlásku, kterou slyšíš, nejdřív samohlásky, pak háčky a ch. A k tomu vytleskej slabiky.</span><span lang="en">Hear a sound and find its letter, four or five sounds at a time, then sh, ch and th.</span></p>
           </div>
-        </div>
+        </article>
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/blend.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true">s·a</span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov skládání</span><span lang="en">Blend Island</span></h4>
+            <p><span lang="cs">Slož slabiky a hlásky do slova: LA · MA je lama. Když to nejde, Taya je řekne pomalu.</span><span lang="en">Blend sounds into short words, one vowel at a time. When it’s tricky, Taya says them slower.</span></p>
+          </div>
+        </article>
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/word.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true"><span lang="cs">les</span><span lang="en">cat</span></span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov slov</span><span lang="en">Word Island</span></h4>
+            <p><span lang="cs">Čti celá slova, i delší a s háčky. Na konci rýmy a jedno nebo víc.</span><span lang="en">Read whole words with blends and vowel pairs, then rhymes and one-or-many.</span></p>
+          </div>
+        </article>
+        <article class="island reveal">
+          <div class="map"><img src="assets/islands/story.svg" width="606" height="834" loading="lazy" alt=""></div>
+          <span class="sym" aria-hidden="true">abc</span>
+          <div class="body">
+            <h4><span lang="cs">Ostrov příběhů</span><span lang="en">Story Island</span></h4>
+            <p><span lang="cs">Od dvou slov až po malé příběhy s otázkou, co se v nich stalo.</span><span lang="en">From two-word phrases to tiny two-line stories with a question about them.</span></p>
+          </div>
+        </article>
       </div>
     </div>
 
@@ -598,14 +612,8 @@
       <h2><span lang="cs">Vyplujte s Tayou na ostrovy</span><span lang="en">Set sail with Taya</span></h2>
       <p><span lang="cs">Stáhněte si Tayu do telefonu nebo tabletu a první ostrov může začít ještě dnes.</span><span lang="en">Get Taya on your phone or tablet, and the first island can start today.</span></p>
       <div class="stores">
-        <a class="store" data-store="ios" href="#stahnout">
-          <svg aria-hidden="true"><use href="#i-phone"/></svg>
-          <span class="t"><small><span lang="cs">Stáhnout v</span><span lang="en">Download on the</span></small><strong>App Store</strong></span>
-        </a>
-        <a class="store" data-store="android" href="#stahnout">
-          <svg aria-hidden="true"><use href="#i-play"/></svg>
-          <span class="t"><small><span lang="cs">Stáhnout na</span><span lang="en">Get it on</span></small><strong>Google Play</strong></span>
-        </a>
+        <a class="store" data-store="ios" data-name="App Store" href="#stahnout"><img lang="cs" src="assets/badges/app-store-cs.svg" width="120" height="40" alt="Stáhnout v App Store"><img lang="en" src="assets/badges/app-store-en.svg" width="120" height="40" alt="Download on the App Store"></a>
+        <a class="store" data-store="android" data-name="Google Play" href="#stahnout"><img lang="cs" src="assets/badges/google-play-cs.png" width="646" height="192" alt="Rozjeďte to na Google Play"><img lang="en" src="assets/badges/google-play-en.png" width="564" height="168" alt="Get it on Google Play"></a>
       </div>
     </div>
   </div>

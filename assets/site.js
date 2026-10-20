@@ -41,7 +41,7 @@
       b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === lang));
     });
     document.querySelectorAll(".store.soon").forEach(function (a) {
-      a.setAttribute("aria-label", a.querySelector("strong").textContent + ", " + meta[lang].soon);
+      a.setAttribute("aria-label", a.getAttribute("data-name") + ", " + meta[lang].soon);
     });
     if (remember) { try { localStorage.setItem("taya.lang", lang); } catch (e) {} }
   }
@@ -62,8 +62,15 @@
       a.removeAttribute("href");
       a.setAttribute("role", "link");
       a.setAttribute("aria-disabled", "true");
-      var small = a.querySelector("small");
-      small.innerHTML = '<span lang="cs">Již brzy v</span><span lang="en">Coming soon to</span>';
+      // The official badges stay untouched (no dimming, nothing on top); a line under them says "coming soon".
+      var row = a.parentNode;
+      if (!row.querySelector(".stores-soon")) {
+        var note = document.createElement("p");
+        note.className = "stores-soon";
+        note.setAttribute("aria-hidden", "true");
+        note.innerHTML = '<span lang="cs">Již brzy v App Store a na Google Play</span><span lang="en">Coming soon to the App Store and Google Play</span>';
+        row.appendChild(note);
+      }
     }
   });
 
