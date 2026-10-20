@@ -73,13 +73,12 @@ html[data-lang="en"] [lang="cs"]:not(html) { display: none !important; }
 .topnav a { padding: 8px 14px; border-radius: 12px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 16px; }
 .topnav a:hover { background: var(--iris-100); color: var(--iris-700); }
 .langs { margin-left: auto; display: flex; padding: 4px; gap: 2px; border-radius: 14px; background: var(--white); border: 2px solid var(--line); }
-.topnav + .langs { margin-left: 8px; }
 .langs button {
   min-width: 44px; height: 36px; border: 0; border-radius: 10px; background: transparent; cursor: pointer;
   font: 800 14px/1 var(--body); letter-spacing: .06em; color: var(--slate);
 }
 .langs button[aria-pressed="true"] { background: var(--iris-500); color: var(--white); }
-@media (min-width: 860px) { .topnav { display: flex; } }
+@media (min-width: 860px) { .topnav { display: flex; } .topnav + .langs { margin-left: 8px; } }
 
 /* ---------- Store badges (official artwork, unmodified) ---------- */
 .stores { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
